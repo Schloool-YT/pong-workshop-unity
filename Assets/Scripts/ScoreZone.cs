@@ -1,10 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScoreZone : MonoBehaviour
 {
     [SerializeField] private PaddleMovement forPlayer;
-    
+    [SerializeField] private ParticleSystem scoreEffect;
+
     private PointManager pointManager;
 
     private void Start()
@@ -15,6 +15,8 @@ public class ScoreZone : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.collider.GetComponent<BallMovement>() == null) return;
+        scoreEffect.transform.position = col.GetContact(0).point;
+        scoreEffect.Play();
         
         pointManager.AddScore(forPlayer);
     }
