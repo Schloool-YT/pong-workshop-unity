@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124682762683884987}
-  m_LocalRotation: {x: 0.32505238, y: 0.945696, z: -0.000000007976625, w: -0.000000004962501}
+  m_LocalRotation: {x: 0.2610531, y: 0.96532446, z: -0.000000007341783, w: -0.000000004567547}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_Children:
@@ -108,8 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8830361939084011632}
-  - component: {fileID: 270169083810258983}
-  - component: {fileID: 727984914259035063}
+  - component: {fileID: 2115672751560414333}
   m_Layer: 0
   m_Name: Particle
   m_TagString: Untagged
@@ -124,15 +123,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4042065130988612000}
-  m_LocalRotation: {x: -0.30910563, y: -0.6359668, z: -0.6359668, w: -0.30910563}
-  m_LocalPosition: {x: -0.08, y: -3.42, z: 0}
-  m_LocalScale: {x: 11.764704, y: 11.764707, z: 11.764705}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: -3.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8884393854579243433}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!120 &270169083810258983
-LineRenderer:
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!96 &2115672751560414333
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -171,58 +171,38 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: -4.311048, y: -0.9374497, z: -0.0000000037252321}
-  - {x: -4.519844, y: -0.98212063, z: -0.000000004537362}
-  - {x: -4.719758, y: -1.1002812, z: -0.0000000035594034}
-  - {x: -4.8896427, y: -1.2402757, z: -0.000000008847121}
-  - {x: -5.036007, y: -1.3987923, z: -0.0000000028865015}
-  - {x: -5.1005387, y: -1.5936749, z: -0.000000010583148}
-  - {x: -5.0074434, y: -1.7893744, z: -0.000000007791246}
-  - {x: -4.9025416, y: -1.9686401, z: -0.0000000036216545}
-  - {x: -4.680604, y: -1.9800944, z: 0.0000000020854816}
-  - {x: -4.4484134, y: -1.893898, z: 0.0000000028143703}
-  - {x: -4.2242074, y: -1.7814384, z: 0.000000010484725}
-  - {x: -4.043978, y: -1.6815906, z: 0.000000014338382}
-  - {x: -3.8803694, y: -1.5636317, z: 0.000000011099903}
-  - {x: -3.684179, y: -1.4714766, z: 0.000000004677388}
-  - {x: -3.5767527, y: -1.2933681, z: 0.000000005039242}
-  - {x: -3.654073, y: -1.1035709, z: 0.000000006653265}
-  - {x: -3.7805793, y: -0.9463246, z: 0.0000000062210432}
-  - {x: -3.9090843, y: -0.7792945, z: 0.0000000028860818}
-  - {x: -3.9591794, y: -0.56523395, z: 0.00000000471267}
-  - {x: -3.90336, y: -0.47345048, z: 0.0000000052950475}
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.4
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 3.2378066
-        outSlope: 3.2378066
+        value: 1
+        inSlope: -0.03817224
+        outSlope: -0.03817224
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.05649715
+        outWeight: 0.0527307
       - serializedVersion: 3
         time: 1
-        value: 1
-        inSlope: 0.08302023
-        outSlope: 0.08302023
+        value: 0
+        inSlope: -2.65666
+        outSlope: -2.65666
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.09792882
+        inWeight: 0.07344633
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 0}
-      key1: {r: 0.050980397, g: 0.36078432, b: 0.6431373, a: 1}
+      key0: {r: 0.050980397, g: 0.36078432, b: 0.6431373, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 1, g: 0.46372247, b: 0, a: 0}
       key3: {r: 1, g: 0.51010674, b: 0, a: 0}
       key4: {r: 1, g: 0.7196592, b: 0, a: 0}
@@ -248,28 +228,15 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 2
+    numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
---- !u!114 &727984914259035063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4042065130988612000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8381fd89a072b0447bd208187c9d01f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderer: {fileID: 270169083810258983}
-  threshhold: 0.2
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
 --- !u!1 &4270383678131453794
 GameObject:
   m_ObjectHideFlags: 0
