@@ -20,6 +20,8 @@ public class TrailController : MonoBehaviour {
     private void Update() {
 
         Vector3 currentPosition = transform.position;
+        renderer.SetPosition(renderer.positionCount - 1, currentPosition);
+        
         if (Vector3.Distance(currentPosition, lastPosition) > threshhold) {
             Vector3[] data = new Vector3[renderer.positionCount];
             renderer.GetPositions(data);
