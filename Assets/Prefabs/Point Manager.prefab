@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToReset: 1.5
+  scoreToWin: 5

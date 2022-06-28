@@ -518,25 +518,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d98c395391a142c4897d5d12702099a3, type: 3}
---- !u!1 &1671609750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4270383678131453794, guid: 2401efc327338b0498869b14d0ff3424, type: 3}
-  m_PrefabInstance: {fileID: 4270383676526953204}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1671609751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671609750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79b3e8bce2e4648839ed6fa0f319021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  maxStartVelocity: 1.5
 --- !u!1 &1799999160
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,10 +629,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 148309359634717701, guid: 29462aa77cb9c5b459293be51cde777f, type: 3}
-      propertyPath: scoreToWin
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3537690732730932204, guid: 29462aa77cb9c5b459293be51cde777f, type: 3}
       propertyPath: m_Name
       value: Point Manager
@@ -712,10 +689,6 @@ PrefabInstance:
     - target: {fileID: 4270383678131453794, guid: 2401efc327338b0498869b14d0ff3424, type: 3}
       propertyPath: m_Name
       value: Ball
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270383678131453795, guid: 2401efc327338b0498869b14d0ff3424, type: 3}
-      propertyPath: m_Constraints
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4270383678131453806, guid: 2401efc327338b0498869b14d0ff3424, type: 3}
       propertyPath: m_RootOrder
@@ -843,54 +816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5202260705667169586, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.b
-      value: 0.09019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260705667169586, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.g
-      value: 0.47058827
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260705667169586, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.r
-      value: 0.91372555
-      objectReference: {fileID: 0}
     - target: {fileID: 5202260705667169596, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
       propertyPath: forPlayer
       value: 
       objectReference: {fileID: 1044224410}
-    - target: {fileID: 5202260705768542841, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.b
-      value: 0.09019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260705768542841, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.g
-      value: 0.47058827
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260705768542841, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.r
-      value: 0.91372555
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260705829981864, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 18.167109
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260705829981871, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260706038538512, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.b
-      value: 0.09019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260706038538512, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.g
-      value: 0.47058827
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202260706038538512, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
-      propertyPath: m_Color.r
-      value: 0.91372555
-      objectReference: {fileID: 0}
     - target: {fileID: 5202260706038538519, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
       propertyPath: forPlayer
       value: 

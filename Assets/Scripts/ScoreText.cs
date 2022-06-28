@@ -10,7 +10,8 @@ public class ScoreText : MonoBehaviour
     private void Start()
     {
         text = GetComponent<Text>();
-        FindObjectOfType<PointManager>().OnScoreUpdate += HandleScoreUpdate;
+        PointManager pointManager = FindObjectOfType<PointManager>();
+        if (pointManager != null) pointManager.OnScoreUpdate += HandleScoreUpdate;
     }
 
     private void HandleScoreUpdate(PaddleMovement paddle, int score)
