@@ -8,7 +8,9 @@ public class CameraShake : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        FindObjectOfType<PointManager>().OnScoreUpdate += HandleScoreUpdate;
+        
+        PointManager pointManager = FindObjectOfType<PointManager>();
+        if (pointManager != null) pointManager.OnScoreUpdate += HandleScoreUpdate;
     }
 
     private void HandleScoreUpdate(PaddleMovement paddleMovement, int score)
