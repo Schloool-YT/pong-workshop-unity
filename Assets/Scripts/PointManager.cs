@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PointManager : MonoBehaviour
 {
     [SerializeField] private float timeToReset;
+    [SerializeField] private int scoreToWin = 5;
 
     public event Action<PaddleMovement, int> OnScoreUpdate;
     
@@ -23,8 +25,14 @@ public class PointManager : MonoBehaviour
 
     public void AddScore(PaddleMovement player)
     {
-        playerScores[player]++;
-        OnScoreUpdate?.Invoke(player, playerScores[player]);
+        int newScore = ++playerScores[player];
+        OnScoreUpdate?.Invoke(player, newScore);
+
+        if (newScore >= scoreToWin)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            return;
+        }
         
         StartCoroutine(ball.Reset(timeToReset));
     }
