@@ -6,11 +6,13 @@ public class BallMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float maxStartVelocity = 5f;
 
+    private TrailRenderer trailRenderer;
     private Vector2 startPoint;
     private Vector2 velocity;
     
     private void Start()
     {
+        trailRenderer = transform.GetComponentInChildren<TrailRenderer>();
         startPoint = transform.position;
         SetInitialVelocity();
     }
@@ -47,6 +49,7 @@ public class BallMovement : MonoBehaviour
     public IEnumerator Reset(float timeToRestart)
     {
         transform.position = startPoint;
+        trailRenderer.Clear();
         velocity = Vector2.zero;
         yield return new WaitForSeconds(timeToRestart);
         
