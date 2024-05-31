@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208102700}
   m_Layer: 0
-  m_Name: Score Zones
+  m_Name: Tore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,6 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208102699}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4993489, y: -0.7273895, z: -0.68372595}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -159,7 +160,6 @@ Transform:
   - {fileID: 702719056}
   - {fileID: 910118950}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Kamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,9 +224,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -260,13 +268,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -290,6 +298,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 208102700}
     m_Modifications:
     - target: {fileID: 1698941963486720454, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
@@ -338,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698941963486720473, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
       propertyPath: m_Name
-      value: Paddle 2 Score Zone
+      value: Tor rechts
       objectReference: {fileID: 0}
     - target: {fileID: 1943942254727034880, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -364,7 +373,14 @@ PrefabInstance:
       propertyPath: forPlayer
       value: 
       objectReference: {fileID: 2128493070}
+    - target: {fileID: 2009361807051085069, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
+      propertyPath: fuerSpieler
+      value: 
+      objectReference: {fileID: 2128493070}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
 --- !u!4 &910118950 stripped
 Transform:
@@ -383,7 +399,7 @@ GameObject:
   - component: {fileID: 1039687133}
   - component: {fileID: 1039687132}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Displayverwaltung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,13 +447,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039687131}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044224410 stripped
 MonoBehaviour:
@@ -455,6 +471,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1799999161}
     m_Modifications:
     - target: {fileID: 4866635859249453093, guid: 91d68b7eed53c2942936c4ba5c4f9092, type: 3}
@@ -503,9 +520,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4866635859249453094, guid: 91d68b7eed53c2942936c4ba5c4f9092, type: 3}
       propertyPath: m_Name
-      value: Lower Wall
+      value: Wand unten
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d68b7eed53c2942936c4ba5c4f9092, type: 3}
 --- !u!4 &1066126685 stripped
 Transform:
@@ -517,14 +537,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
+      propertyPath: hochTaste
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
       propertyPath: moveUpKey
       value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
       propertyPath: moveDownKey
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
+      propertyPath: runterTaste
       value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496550, guid: d98c395391a142c4897d5d12702099a3, type: 3}
@@ -573,9 +602,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496552, guid: d98c395391a142c4897d5d12702099a3, type: 3}
       propertyPath: m_Name
-      value: Paddle 1
+      value: Paddel Links
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d98c395391a142c4897d5d12702099a3, type: 3}
 --- !u!1 &1799999160
 GameObject:
@@ -587,7 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799999161}
   m_Layer: 0
-  m_Name: Wallls
+  m_Name: Waende
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,6 +632,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799999160}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.3231684, y: -0.6382007, z: -5.8335447}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -608,7 +641,6 @@ Transform:
   - {fileID: 44224874}
   - {fileID: 1066126685}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2128493070 stripped
 MonoBehaviour:
@@ -626,6 +658,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 208102700}
     m_Modifications:
     - target: {fileID: 273266731225530129, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
@@ -698,24 +731,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698941963486720473, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
       propertyPath: m_Name
-      value: Paddle 1 Score Zone
+      value: Tor links
       objectReference: {fileID: 0}
     - target: {fileID: 2009361807051085069, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
       propertyPath: forPlayer
       value: 
       objectReference: {fileID: 1044224410}
+    - target: {fileID: 2009361807051085069, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
+      propertyPath: fuerSpieler
+      value: 
+      objectReference: {fileID: 1044224410}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67bcb236816642c4186637c8157fd16c, type: 3}
 --- !u!1001 &1725171773680524091
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3537690732730932204, guid: 29462aa77cb9c5b459293be51cde777f, type: 3}
       propertyPath: m_Name
-      value: Point Manager
+      value: Schiedsrichter
       objectReference: {fileID: 0}
     - target: {fileID: 5153697937306640837, guid: 29462aa77cb9c5b459293be51cde777f, type: 3}
       propertyPath: m_RootOrder
@@ -762,12 +803,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29462aa77cb9c5b459293be51cde777f, type: 3}
 --- !u!1001 &4270383676526953204
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4270383678131453794, guid: 2401efc327338b0498869b14d0ff3424, type: 3}
@@ -835,12 +880,16 @@ PrefabInstance:
       value: -6e-45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2401efc327338b0498869b14d0ff3424, type: 3}
 --- !u!1001 &4866635859272599887
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1799999161}
     m_Modifications:
     - target: {fileID: 4866635859249453093, guid: 91d68b7eed53c2942936c4ba5c4f9092, type: 3}
@@ -889,28 +938,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4866635859249453094, guid: 91d68b7eed53c2942936c4ba5c4f9092, type: 3}
       propertyPath: m_Name
-      value: Upper Wall
+      value: Wand oben
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d68b7eed53c2942936c4ba5c4f9092, type: 3}
 --- !u!1001 &5202260706224964532
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5202260705667169584, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
+      propertyPath: m_Name
+      value: Punktetafel 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5202260705667169596, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
       propertyPath: forPlayer
       value: 
       objectReference: {fileID: 1044224410}
+    - target: {fileID: 5202260705667169596, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
+      propertyPath: fuerSpieler
+      value: 
+      objectReference: {fileID: 1044224410}
+    - target: {fileID: 5202260705768542847, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
+      propertyPath: m_Name
+      value: Grenze
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202260706038538517, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
+      propertyPath: m_Name
+      value: Punktetafel 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5202260706038538519, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
       propertyPath: forPlayer
       value: 
       objectReference: {fileID: 2128493070}
+    - target: {fileID: 5202260706038538519, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
+      propertyPath: fuerSpieler
+      value: 
+      objectReference: {fileID: 2128493070}
     - target: {fileID: 5202260707231549792, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Display
       objectReference: {fileID: 0}
     - target: {fileID: 5202260707231549804, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
       propertyPath: m_Pivot.x
@@ -997,20 +1070,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e6750f4b42e9744a456a7a17a5a8b0, type: 3}
 --- !u!1001 &7974254002428226175
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
+      propertyPath: hochTaste
+      value: 273
+      objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
       propertyPath: moveUpKey
       value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
       propertyPath: moveDownKey
+      value: 274
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974254003129496549, guid: d98c395391a142c4897d5d12702099a3, type: 3}
+      propertyPath: runterTaste
       value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496550, guid: d98c395391a142c4897d5d12702099a3, type: 3}
@@ -1059,7 +1144,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7974254003129496552, guid: d98c395391a142c4897d5d12702099a3, type: 3}
       propertyPath: m_Name
-      value: Paddle 2
+      value: Paddel Rechts
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d98c395391a142c4897d5d12702099a3, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 519420032}
+  - {fileID: 1039687134}
+  - {fileID: 4270383676526953204}
+  - {fileID: 1417380357}
+  - {fileID: 7974254002428226175}
+  - {fileID: 1799999161}
+  - {fileID: 208102700}
+  - {fileID: 1725171773680524091}
+  - {fileID: 5202260706224964532}

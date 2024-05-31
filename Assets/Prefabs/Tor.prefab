@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1057366392349254944}
   - component: {fileID: 2009361807051085069}
   m_Layer: 0
-  m_Name: Score Zone
+  m_Name: Tor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698941963486720473}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.04, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1943942254727034880}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1057366392349254944
 BoxCollider2D:
@@ -43,6 +44,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -71,13 +91,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d9d1dd35884d2cb77eaabcfd6e02b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forPlayer: {fileID: 0}
-  scoreEffect: {fileID: 1943942254727035135}
+  fuerSpieler: {fileID: 0}
+  punkteEffekt: {fileID: 1943942254727035135}
 --- !u!1001 &70030390879115212
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1698941963486720454}
     m_Modifications:
     - target: {fileID: 1874211485970116401, guid: d0a08f3c484202f4cb560ed4f56a7673, type: 3}
@@ -129,6 +150,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0a08f3c484202f4cb560ed4f56a7673, type: 3}
 --- !u!4 &1943942254727034880 stripped
 Transform:

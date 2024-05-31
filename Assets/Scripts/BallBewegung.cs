@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class BallMovement : MonoBehaviour
+public class BallBewegung : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float maxStartVelocity = 5f;
+    [SerializeField] private float geschwindigkeit = 5f;
+    [SerializeField] private float hoechsteStartGeschwindigkeit = 5f;
 
     private TrailRenderer trailRenderer;
     private Vector2 startPoint;
@@ -25,14 +26,14 @@ public class BallMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(velocity * speed * Time.deltaTime);
+        transform.Translate(velocity * geschwindigkeit * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.GetComponent<PaddleMovement>() != null) velocity = new Vector2(-velocity.x, GetRandomYVelocity()).normalized;
+        if (col.collider.GetComponent<PaddelBewegung>() != null) velocity = new Vector2(-velocity.x, GetRandomYVelocity()).normalized;
         
-        if (col.collider.GetComponent<Wall>() != null)
+        if (col.collider.GetComponent<Wand>() != null)
         {
             bool velocityWasPositive = velocity.y > 0f;
             float randomVelocity = GetRandomYVelocity();
@@ -44,7 +45,7 @@ public class BallMovement : MonoBehaviour
         }
     }
 
-    private float GetRandomYVelocity() => Random.Range(-maxStartVelocity, maxStartVelocity);
+    private float GetRandomYVelocity() => Random.Range(-hoechsteStartGeschwindigkeit, hoechsteStartGeschwindigkeit);
 
     public IEnumerator Reset(float timeToRestart)
     {
